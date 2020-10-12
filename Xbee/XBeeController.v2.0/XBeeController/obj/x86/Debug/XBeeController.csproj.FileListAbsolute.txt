@@ -1,0 +1,9 @@
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\bin\Debug\XBeeController.exe.config
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\bin\Debug\XBeeController.exe
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\bin\Debug\XBeeController.pdb
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\obj\x86\Debug\XBeeController.csprojResolveAssemblyReference.cache
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\obj\x86\Debug\XBee.MainForm.resources
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\obj\x86\Debug\XBee.Properties.Resources.resources
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\obj\x86\Debug\XBeeController.csproj.GenerateResource.Cache
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\obj\x86\Debug\XBeeController.exe
+C:\Users\syxre\Downloads\Project\RASP pi\Xbee\XBeeController.v2.0\XBeeController\obj\x86\Debug\XBeeController.pdb

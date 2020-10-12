@@ -1,0 +1,29 @@
+#jumbotron{
+    margin-right: 0;
+    height:100%;
+    
+}
+#containerHu{
+    margin: 0 auto;
+    height:49%;
+    width: 49%;
+    display:inline-block;
+}
+#containerLu{
+    margin: 0 auto;
+    height:49%;
+    width: 49%;
+    display:inline-block;
+}
+#containerTe{
+    margin: 0 auto;
+    height:49%;
+    width: 49%;
+    display:inline-block;
+}
+#containerRD{
+    margin: 0 auto;
+    height:49%;
+    width: 49%;
+    display:inline-block;
+}

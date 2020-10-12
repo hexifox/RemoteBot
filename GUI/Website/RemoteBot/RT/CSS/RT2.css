@@ -1,0 +1,24 @@
+#jumbotron{
+    margin-left: 0;
+    height:100%;
+    
+}
+#containerPr{
+    margin: 0 auto;
+    height:49%;
+    width: 49%;
+    display:inline-block;
+}
+#containerSP{
+    margin: 0 auto;
+    height:49%;
+    width: 49%;
+    display:inline-block;
+}
+#containerAl{
+    margin: 0 auto;
+    height:49%;
+    width: 49%;
+    display:inline-block;
+}
+

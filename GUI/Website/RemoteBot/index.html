@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Remote Bot</title>
+		<link rel="stylesheet" href="Pages/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="Pages/css/javascript.fullPage.css" />
+		<script type="text/javascript" src="Pages/js/jquery-1.10.2.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	<script>
+   
+function autoResize(id){
+				var newheight;
+				var newwidth;
+
+				if(document.getElementById){
+					newheight=document.getElementById(id).contentWindow.document.body.scrollHeight;
+					newwidth=document.getElementById(id).contentWindow.document.body.scrollWidth;
+				}
+
+				document.getElementById(id).height= (newheight) + "px";
+				document.getElementById(id).width= (newwidth) + "px";
+			}
+            
+$(document).ready(function() {
+<!----- JQUERY FOR SLIDING NAVIGATION ---> 
+	$('a[href*=#]').each(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+			&& location.hostname == this.hostname
+			&& this.hash.replace(/#/,'') ) {
+				var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+				var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+				if ($target) {
+					var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+			$(this).click(function() {
+				$("#nav li a").removeClass("active");
+				$(this).addClass('active');
+				$('html, body').animate({scrollTop: targetOffset}, 1000);
+				return false;
+				});
+			}
+		}
+	});
+
+});
+
+
+</script>
+ </head> 
+<body>
+
+<!----- HEADER START--->   
+<header id="header">
+<div class="wel_content">
+<div id="logo"><a href=""> REMOTE BOT </a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#Home" class="active" title="Next Section" >Home</a></li>
+		<li><a href="#About" title="Next Section">About</a></li>
+		<li><a href="#RaspPi" title="Next Section">Raspberry Pi, and sensors</a></li>
+		<li><a href="#RT" title="Next Section">Computer Side</a></li>
+		<li><a href="#Contact" title="Next Section">Contact</a></li>
+	</ul>
+</nav>
+</div>
+</header>	
+<!----- HEADER END--->  
+<!----- SLIDES START --->  
+<div id="fullpage">  
+	<div class="section" id="section1">
+		<div id="slide1" class="slide">
+			<div class="circle">
+				<div id="pi_icon"> </div>
+				<h2>Get the latest measures, using</h2>
+				<h1>REMOTE BOT</h1>
+				<div id="divider"> </div>
+			</div> 
+		</div> 
+	</div>
+	<div class="section" id="section2">
+		<div id="slide2" class="slide">
+			<div class="content">
+                <h2>What is RemoteBot?</h2>
+                <p>Remote Bot is a prototype of a measurement station (Temperature, Humidity, Light, Pressure and others) communicating with a Host PC wirelessly (over ~40km) allowing manipulation and storage of the data transmitted in a graphical user interface (GUI) fitting the system.
+                It would allow measurements in areas difficult to access, or with climate condition making long stay for human difficult. Its embedded wheel system will allow it to move on its own, following commands remotely.
+                This system needs to be power efficient, show high rate and accurate samples and have reliable remote capabilities in order to meet the given requirements. These will be addressed through the choice of the components, such as a power-friendly microcontroller, solar panel, powerful RF modules and an array of strong sensors.</p>
+                <p>Since the start of its development, and because the milestones were reached faster than expected, it was decided to extend it with an online database, using MySQL, to make the data available at greater distance. It is now in fact online, and can be accessed from almost anywhere.</p>
+                 <h3>Using Raspberry Pi, Arduino.</h3>
+                <p>The project is using both raspberry Pi, and Arduino.
+                The Raspberry is used to manage the sensors and export data with Xbee, 
+                while arduino is slaved to the RPi, allowing Analogue measures, that the
+                RPi cannot do. Here is a full explanation of how it works: </p>
+                <div style="text-align: center">
+			    <img src="Pages/IMG/Project_Poster.jpg" alt="Project Poster" 
+                style="width:70%;">
+                </div>
+                <p>Navigate to the right to see how the other "blocks" behave.</p>
+                <p>Navigate below to have more information on the RPi and the sensors.</p>
+
+            </div>
+		</div> 
+		<div id="slide2" class="slide">
+			<div class="content">
+				<h2>Javascript, PHP, MySQL, HTML and CSS</h2>
+                <p>MySQL is the language and type in which the database is coded. It is accessed via PHP, and then transmitted to the website via AJAX, which uses JavaScript.</p>
+                <p>This page is mainly coded in HTML and CSS, to help having a better experience using the website..</p>
+                <div style="text-align: center">
+			    <img src="Pages/IMG/php2.jpg" alt="PHP and MySQL" 
+                style="width:70%;">
+                
+                </div>
+			</div> 
+		</div> 
+		 
+		
+	</div>
+	<div class="section" id="section3">
+	    <div id="slide3" class="slide">
+            <div class="content" style="margin-top:140px; background: rgba(34,34,34,0.5); padding:20px;">
+                <div style="text-align: center">
+                <img src="Pages/IMG/Pi_2_Model_B.png" alt="RPI2B+" align="right" style="position:absolute; 
+                top: 40%; width:400;height:209px;">
+                </div>
+                <h2>RaspBerry Pi2 B+</h2>
+                <p>The Raspberry Pi 2 Model B is the second generation Raspberry Pi.</p>
+                <p>It replaced the original Raspberry Pi 1 Model B+ in February 2015. </p>
+                <p>Compared to the Raspberry Pi 1 it has:</p>
+                <ul>
+                    <li>A 900MHz quad-core ARM Cortex-A7 CPU</li>
+                    <li>1GB RAM</li>
+                </ul>
+                Like the (Pi 1) Model B+, it also has:
+                <ul>
+                    <li>4 USB ports</li>
+                    <li>40 GPIO pins</li>
+                    <li>Full HDMI port</li>
+                    <li>Ethernet port</li>
+                    <li>Combined 3.5mm audio jack and composite video</li>
+                    <li>Camera interface (CSI)</li>
+                    <li>Display interface (DSI)</li>
+                    <li>Micro SD card slot</li>
+                    <li>VideoCore IV 3D graphics core</li>
+                </ul>
+                <p>Because it has an ARMv7 processor, it can run the full range of ARM GNU/Linux distributions, </p>
+                <p>including Snappy Ubuntu Core, as well as Microsoft Windows 10 (see the blog for more information).</p>
+                <p>The Raspberry Pi 2 has an identical form factor to the previous (Pi 1) Model B+ and has complete compatibility with Raspberry Pi 1.</p>
+			 </div>
+		</div> 
+        <div id="slide3" class="slide">
+            
+            <div class="content" style="margin-top:140px; background: rgba(34,34,34,0.5); padding:20px;">
+                <h2>Sensors</h2>
+                <p>The WDT, or Wireless Data transceiver, is the Remote Unit. It hosts all the sensoring section of the project.</p>
+                <p>It uses an RPi as its core, and take the following measurements: </p>
+                <ul>
+                    <li>Temperature, Pressure, Sea-Level pressure and Altitude, With a BMP 180 sensor.</li>
+                    <li>Luminosity, with a simple LDR sensor.</li>
+                    <li>Rain Drops, with a simple Rain Drop sensor.</li>
+                    <li>Humidity and Temperature again, with a DHT AM2302 sensor.</li>
+                    <li>Finally, Position and Time, using a GPS chip.</li>
+                </ul>
+                <p>It also has special features, such as:</p>
+                <ul>  
+                    <li>Camera interface and Streaming, over Wifi.</li>
+                    <li>An on-board Touchscreen display will be implemented.</li>
+                    <li>Xbee of course, for long-distance transmission.</li>
+                    <li>A wheel system, to move around!</li>
+                </ul>
+                <p>Both for the screen interface, and for all the analogue measurements, it uses Arduinos as slaves (an Uno and a Nano).</p>
+            </div>
+		</div> 
+	</div>
+	<div class="section" id="section4">
+        <div id="slide4" class="slide">
+			<div class="content">
+                <h2>Some Results !</h2>
+                <p>Will be presented here some results. First of all, can be seen below the map of where is the Remote Bot!</p>
+			    <div style="text-align: center; margin-top:-10px; height:500px;">
+			    <iframe src="GPS/PHP/map.php?id=1" height="100%"; width="100%"; id="iframe3" frameborder="0" onLoad="autoResize('iframe3');"></iframe>
+                </div>
+                <p>For the Dashboard, click <a href="http://remotebot.tech/dashboard.html">here</a>.</p>
+            </div> 			
+        </div> 
+        
+		<div id="slide4" class="slide">
+			<div class="content">
+			</div> 
+            <div style="text-align: center;  position:relative; margin-top:-10px;">
+			<iframe src="RT/RT1.html" width="90%"; id="iframe1"  marginheight="0" frameborder="0" onLoad="autoResize('iframe1');"></iframe>
+            </div>			
+        </div> 
+	
+	
+		<div id="slide4" class="slide">
+			<div class="content">
+			</div>
+            <div style="text-align: center;  position:relative; margin-top:-10px;">
+			<iframe src="RT/RT2.html" width="90%"; id="iframe2" marginheight="0" frameborder="0" onLoad="autoResize('iframe2');"></iframe>			
+            </div> 
+        </div>
+	</div>
+	<div class="section" id="section5">
+		<div id="slide5" class="slide">
+                <div style="margin-top: 10%; background: rgba(34,34,34,0.5); padding:20px; width: 40%; margin-left:30%">
+			    <h2>About me</h2>
+                    <ul>
+                        <li>Currently third year student at LMU (London Metropolitan University), in Bachelor of enginerring: Communications and Electronics Engineering. #Holloway Road</li>
+                        <br>
+                        <li>Also working Part-Time as It Support, for World ORT Trust, in London, Camden.</li>
+                        <br>
+                        <li>Software, Hardware and Networking Hobbyist, especially Web-based and Autonoumous (AI) systems.</li>
+                    </ul>
+                    <div id="divider"> </div>
+                <h2>Contact me</h2>
+                    <ul>
+                        <li>email: syx.ren@outlook.com</li>
+                        <li>phone: 077** *****1</li>
+                    </ul>
+                </div>
+                
+			
+
+		</div> 
+	</div>
+</div>
+<!----- SLIDES END --->
+<!-- Full Page Controls -->
+<script type="text/javascript" src="Pages/js/javascript.fullPage.js"></script>
+<script type="text/javascript">
+	fullpage.initialize('#fullpage', {
+		anchors: ['Home', 'About', 'RaspPi', 'RT', 'Contact'],
+		menu: '#menu',
+		css3:true
+	});
+
+</script>
+
+
+</body>
+</html>

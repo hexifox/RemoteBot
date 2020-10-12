@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="Pages/css/graphstyle.css"/>
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script type='text/javascript' src='Pages/js/jquery.ba-hashchange.min.js'></script>
+        <script type='text/javascript' src='Pages/js/dynamicpage.js'></script>
+        <script>
+            function autoResize(id){
+				var newheight;
+				var newwidth;
+
+				if(document.getElementById){
+					newheight=document.getElementById(id).contentWindow.document.body.scrollHeight;
+					newwidth=document.getElementById(id).contentWindow.document.body.scrollWidth;
+				}
+
+				document.getElementById(id).height= (newheight) + "px";
+				document.getElementById(id).width= (newwidth) + "px";
+			}
+        </script>
+        <style>
+        html body{
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: 0;
+        }
+        </style>
+
+</head> 
+<body>
+    <div id="page-wrap">
+
+        <header>
+		  <h1>Dashboard</h1>
+		  <div id="banner">
+		      <ul class="group">
+                  <li><a href="dashboard.html">Home & Map</a></li>
+		          <li><a href="Pages/Graph/Altitude.html">Altitude</a></li>
+		          <li><a href="Pages/Graph/Temperature.html">Temperature</a></li>
+		          <li><a href="Pages/Graph/Humidity.html">Humidity</a></li>
+                  <li><a href="Pages/Graph/Luminosity.html">Luminosity</a></li>
+		          <li><a href="Pages/Graph/Pressure.html">Pressure</a></li>
+		          <li><a href="Pages/Graph/Sea_Level_Pressure.html">Sea Level Pressure</a></li>
+                  <li><a href="Pages/Graph/Rain_Drop.html">Rain Drop</a></li>
+		      </ul>
+		  </div>
+		</header>
+		<section id="main-content">
+		<div id="guts" style="background-color: grey; color:white;">
+		    <div style="margin:40px;">
+                <h2>Welcome to RemoteBot Dashboard</h2>
+                    
+                <p>Here are provided all the graphs for most of the measurements the RemoteBoot has made. For the information website, click <a href="http://www.remotebot.tech">here</a>.</p>
+                <p>On the navigation tab, can be selected the parameter you want to look at. Each of the sections displays two graphs: The latest measures, and the history of the measurements.</p> 
+                <p>Below, can be seen the latest position of the Remote Bot:</p> 
+		    </div>
+		    <div style="text-align: center; margin:20px; height:500px; padding-bottom:20px;">
+			    <iframe src="GPS/PHP/map.php?id=1" height="100%"; width="100%"; id="iframe3" frameborder="0" onLoad="autoResize('iframe3');"></iframe>
+            </div>  
+		</div>
+		</section>
+		
+	</div>
+	
+	<div class="footer">
+	 RemoteBot.Tech - Simon Renault - London Metropolitan University Projects - 2016 - syx.ren@outlook.com
+	</div>
+</body>
+</html>
